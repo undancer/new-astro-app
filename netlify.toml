@@ -8,5 +8,6 @@ publish = "dist"
 [functions]
 #directory = ".netlify"
 #directory = "dist/functions"
-directory = "/packages/app/dist"
+#directory = "/packages/app/dist"
 #directory = "/packages/app/dist/functions"
+directory = "/packages/app/.netlify/functions-internal"
