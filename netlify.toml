@@ -5,3 +5,5 @@
 base = "/packages/app"
 publish = "dist"
 #publish = "/packages/app/dist"
+[functions]
+directory = ".netlify"
