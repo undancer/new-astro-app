@@ -1,14 +1,5 @@
-#[build]
-#command = "npm run build"
-#publish = "dist"
 [build]
 base = "/packages/app"
 publish = "dist"
-#publish = "/packages/app/dist"
 [functions]
-#directory = ".netlify"
-#directory = "dist/functions"
-#directory = "/packages/app/dist"
-#directory = "/packages/app/dist/functions"
-#directory = "/packages/app/.netlify/functions-internal"
 directory = ".netlify/functions-internal"
