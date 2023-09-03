@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^3.0.1",
+    "@astrojs/vue": "^2.2.1",
     "@unocss/reset": "^0.55.6",
     "astro": "^3.0.7",
-    "unocss": "^0.55.6"
+    "unocss": "^0.55.6",
+    "vue": "^3.3.4"
   }
 }

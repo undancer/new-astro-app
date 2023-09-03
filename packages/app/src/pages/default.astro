@@ -1,8 +1,12 @@
 ---
-import Layout from '../layouts/Default/Layout.astro';
+import Layout from '../layouts/Default/Layout.astro'
+import Foo from '../components/Foo.vue'
+import Bar from '../components/Bar.vue';
 ---
 <Layout>
 <div>
   layout ?
+  <Foo client:only="vue"></Foo>
+  <Bar client:only="vue"></Bar>
 </div>
 </Layout>

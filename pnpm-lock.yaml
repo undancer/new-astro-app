@@ -29,6 +29,9 @@ importers:
       '@astrojs/netlify':
         specifier: ^3.0.1
         version: 3.0.1(astro@3.0.7)
+      '@astrojs/vue':
+        specifier: ^2.2.1
+        version: 2.2.1(@babel/core@7.22.11)(astro@3.0.7)(vite@4.4.9)(vue@3.3.4)
       '@unocss/reset':
         specifier: ^0.55.6
         version: 0.55.6
@@ -38,6 +41,9 @@ importers:
       unocss:
         specifier: ^0.55.6
         version: 0.55.6(postcss@8.4.29)(vite@4.4.9)
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
 
   packages/blog:
     dependencies:
@@ -526,6 +532,25 @@ packages:
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.22.11)
       '@vue/compiler-sfc': 3.3.4
       astro: 2.10.15
+      vue: 3.3.4
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+      - vite
+    dev: false
+
+  /@astrojs/vue@2.2.1(@babel/core@7.22.11)(astro@3.0.7)(vite@4.4.9)(vue@3.3.4):
+    resolution: {integrity: sha512-fq+RKFAKpIRcobF/803kMJWv/lobf9IIk6K5As5fWE/eYTpykkgHtxd+zDnf7d4I2V7K9XLKV06Oi6Q+oTJmDw==}
+    engines: {node: '>=16.12.0'}
+    peerDependencies:
+      astro: ^2.5.6
+      vue: ^3.2.30
+    dependencies:
+      '@vitejs/plugin-vue': 4.3.4(vite@4.4.9)(vue@3.3.4)
+      '@vitejs/plugin-vue-jsx': 3.0.2(vite@4.4.9)(vue@3.3.4)
+      '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.22.11)
+      '@vue/compiler-sfc': 3.3.4
+      astro: 3.0.7
       vue: 3.3.4
     transitivePeerDependencies:
       - '@babel/core'
@@ -4910,7 +4935,7 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.0
       estree-util-is-identifier-name: 2.1.0
-      estree-walker: 3.0.0
+      estree-walker: 3.0.3
     dev: false
 
   /estree-util-is-identifier-name@2.1.0:
@@ -8397,7 +8422,7 @@ packages:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
     dependencies:
       '@types/estree': 1.0.1
-      estree-walker: 3.0.0
+      estree-walker: 3.0.3
       is-reference: 3.0.1
     dev: false
 
