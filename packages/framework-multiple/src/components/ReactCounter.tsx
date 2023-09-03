@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 /** A counter written with React */
 export function Counter({ children }) {
-	const [count, setCount] = useState(0);
-	const add = () => setCount((i) => i + 1);
-	const subtract = () => setCount((i) => i - 1);
+  const [count, setCount] = useState(0)
+  const add = () => setCount(i => i + 1)
+  const subtract = () => setCount(i => i - 1)
 
-	return (
+  return (
 		<>
 			<div className="counter">
 				<button onClick={subtract}>-</button>
@@ -15,5 +15,5 @@ export function Counter({ children }) {
 			</div>
 			<div className="counter-message">{children}</div>
 		</>
-	);
+  )
 }
