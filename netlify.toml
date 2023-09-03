@@ -6,4 +6,6 @@ base = "/packages/app"
 publish = "dist"
 #publish = "/packages/app/dist"
 [functions]
-directory = ".netlify"
+#directory = ".netlify"
+directory = "dist/functions"
+#directory = "/packages/app/dist/functions"
