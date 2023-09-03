@@ -14,6 +14,13 @@ module.exports = {
       },
     },
     {
+      files: ['*.tsx'],
+      rules: {
+        'no-console': ['off'],
+        'no-tabs': ['off'],
+      },
+    },
+    {
       // Define the configuration for `.astro` file.
       files: ['*.astro'],
       // Enable this plugin
@@ -42,6 +49,7 @@ module.exports = {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
         'no-tabs': ['off'],
+        'no-mixed-spaces-and-tabs': ['off'],
       },
     },
     {
