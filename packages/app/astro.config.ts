@@ -1,17 +1,9 @@
 import netlify from '@astrojs/netlify/functions'
+import vue3 from '@astrojs/vue'
 import { defineConfig } from 'astro/config'
-import {
-  presetAttributify,
-  presetIcons,
-  presetTypography,
-  presetUno,
-  presetWebFonts,
-  transformerDirectives,
-  transformerVariantGroup,
-} from 'unocss'
+import { presetUno } from 'unocss'
 import { presetDaisy } from 'unocss-preset-daisy'
 import UnoCSS from 'unocss/astro'
-import vue3 from '@astrojs/vue'
 
 // https://astro.build/config
 export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
@@ -23,32 +15,39 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
     }),
     UnoCSS({
       injectReset: true,
-      shortcuts: [
-        // ...
+      injectEntry: true,
+      injectExtra: [
+          `import ${JSON.stringify('@unocss/reset/normalize.css')}`,
+          `import ${JSON.stringify('@unocss/reset/sanitize/sanitize.css')}`,
+          `import ${JSON.stringify('@unocss/reset/sanitize/assets.css')}`,
+        // `import ${JSON.stringify('@unocss/reset/tailwind-compat.css')}`,
       ],
-      theme: {
-        colors: {
-          // ...
-        },
-      },
+      // inspector: true,
+      // mode: 'global',
+      // shortcuts: [
+      //   // ...
+      // ],
+      // theme: {
+      //   colors: {
+      //     // ...
+      //   },
+      // },
       presets: [
         presetUno(),
-        presetAttributify(),
-        presetIcons(),
-        presetTypography(),
-        presetWebFonts({
-          fonts: {
-            // ...
-          },
-        }),
-        presetDaisy({
-
-        }),
+        // presetAttributify(),
+        // presetIcons(),
+        // presetTypography(),
+        // presetWebFonts({
+        //   fonts: {
+        //     // ...
+        //   },
+        // }),
+        presetDaisy({}),
       ],
-      transformers: [
-        transformerDirectives(),
-        transformerVariantGroup(),
-      ],
+      // transformers: [
+      //   // transformerDirectives(),
+      //   // transformerVariantGroup(),
+      // ],
     }),
   ],
   output: 'server',
