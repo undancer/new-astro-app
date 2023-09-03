@@ -1,5 +1,15 @@
 import netlify from '@astrojs/netlify/functions'
 import { defineConfig } from 'astro/config'
+import {
+  presetAttributify,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
+import { presetDaisy } from 'unocss-preset-daisy'
 import UnoCSS from 'unocss/astro'
 import vue3 from '@astrojs/vue'
 
@@ -13,6 +23,32 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
     }),
     UnoCSS({
       injectReset: true,
+      shortcuts: [
+        // ...
+      ],
+      theme: {
+        colors: {
+          // ...
+        },
+      },
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons(),
+        presetTypography(),
+        presetWebFonts({
+          fonts: {
+            // ...
+          },
+        }),
+        presetDaisy({
+
+        }),
+      ],
+      transformers: [
+        transformerDirectives(),
+        transformerVariantGroup(),
+      ],
     }),
   ],
   output: 'server',
