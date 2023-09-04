@@ -31,13 +31,16 @@ export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${
 /** */
 export function getCanonical(path = ''): string | URL {
   const url = String(new URL(path, SITE.site))
-  if (SITE.trailingSlash == false && path && url.endsWith('/'))
+  if (SITE.trailingSlash === false && path && url.endsWith('/'))
     return url.slice(0, -1)
-  else if (SITE.trailingSlash == true && path && !url.endsWith('/'))
+  else if (SITE.trailingSlash === true && path && !url.endsWith('/'))
     return `${url}/`
 
   return url
 }
+
+/** */
+const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink)
 
 /** */
 export function getPermalink(slug = '', type = 'page'): string {
@@ -79,6 +82,3 @@ export function getAsset(path: string): string {
     .filter(el => !!el)
     .join('/')}`
 }
-
-/** */
-const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink)
