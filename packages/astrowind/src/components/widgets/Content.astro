@@ -1,10 +1,10 @@
 ---
-import type { Content } from '~/types';
-import Headline from '../ui/Headline.astro';
-import WidgetWrapper from '../ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
-import ItemGrid from '../ui/ItemGrid.astro';
+import Headline from '../ui/Headline.astro'
+import WidgetWrapper from '../ui/WidgetWrapper.astro'
+import ItemGrid from '../ui/ItemGrid.astro'
+import type { Content } from '~/types'
+import Image from '~/components/common/Image.astro'
+import Button from '~/components/ui/Button.astro'
 
 const {
   title = await Astro.slots.render('title'),
@@ -59,7 +59,7 @@ const {
           columns={columns}
           defaultIcon="tabler:check"
           classes={{
-            container: `gap-y-4 md:gap-y-8`,
+            container: 'gap-y-4 md:gap-y-8',
             panel: 'max-w-none',
             title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
             description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
@@ -72,9 +72,11 @@ const {
         {
           image && (
             <div class="relative m-auto max-w-4xl">
-              {typeof image === 'string' ? (
+              {typeof image === 'string'
+                ? (
                 <Fragment set:html={image} />
-              ) : (
+                  )
+                : (
                 <Image
                   class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
                   width={500}
@@ -84,7 +86,7 @@ const {
                   layout="responsive"
                   {...(image as any)}
                 />
-              )}
+                  )}
             </div>
           )
         }

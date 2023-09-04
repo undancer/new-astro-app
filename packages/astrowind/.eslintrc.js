@@ -6,13 +6,13 @@ module.exports = {
     browser: true,
   },
   extends: ['eslint:recommended', 'plugin:astro/recommended'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  rules: {},
+  // parser: '@typescript-eslint/parser',
+  // parserOptions: {
+  //   tsconfigRootDir: __dirname,
+  //   ecmaVersion: 'latest',
+  //   sourceType: 'module',
+  // },
+  // rules: {},
   overrides: [
     {
       files: ['*.js'],
@@ -50,4 +50,4 @@ module.exports = {
       parser: '@typescript-eslint/parser',
     },
   ],
-};
+}

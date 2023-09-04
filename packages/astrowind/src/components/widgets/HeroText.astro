@@ -1,5 +1,5 @@
 ---
-import Button from '~/components/ui/Button.astro';
+import Button from '~/components/ui/Button.astro'
 
 const {
   title = await Astro.slots.render('title'),
@@ -37,22 +37,26 @@ const {
             {
               callToAction && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
+                  {typeof callToAction === 'string'
+                    ? (
                     <Fragment set:html={callToAction} />
-                  ) : (
+                      )
+                    : (
                     <Button variant="primary" {...callToAction} />
-                  )}
+                      )}
                 </div>
               )
             }
             {
               callToAction2 && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
+                  {typeof callToAction2 === 'string'
+                    ? (
                     <Fragment set:html={callToAction2} />
-                  ) : (
+                      )
+                    : (
                     <Button {...callToAction2} />
-                  )}
+                      )}
                 </div>
               )
             }

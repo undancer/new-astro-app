@@ -1,8 +1,11 @@
 {
   "name": "@onwidget/astrowind",
-  "description": "AstroWind: A free template using Astro 3.0 and Tailwind CSS. Astro starter theme.",
   "version": "1.0.0-beta.3",
   "private": true,
+  "description": "AstroWind: A free template using Astro 3.0 and Tailwind CSS. Astro starter theme.",
+  "engines": {
+    "node": ">=18.14.1"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -46,8 +49,5 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2"
-  },
-  "engines": {
-    "node": ">=18.14.1"
   }
 }
