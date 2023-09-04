@@ -26,6 +26,9 @@ importers:
 
   packages/app:
     dependencies:
+      '@astrojs/mdx':
+        specifier: ^1.0.0
+        version: 1.0.0(astro@3.0.7)
       '@astrojs/netlify':
         specifier: ^3.0.1
         version: 3.0.1(astro@3.0.7)
@@ -517,7 +520,6 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@astrojs/netlify@3.0.1(astro@3.0.7):
     resolution: {integrity: sha512-CFSF10+xyNXqb2oFYVJMRB6AdilwgKrB3Iyf0+sAXZZM7GqITc0H98hoWUQfawxgmzi6aXqv+DC8mvEvCoCRlg==}

@@ -12,6 +12,7 @@ import {
 } from 'unocss'
 import { presetDaisy } from 'unocss-preset-daisy'
 import UnoCSS from 'unocss/astro'
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
@@ -28,10 +29,12 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
       injectReset: '@unocss/reset/tailwind-compat.css',
       // injectEntry: true,
       injectExtra: [
-          `import ${JSON.stringify('@unocss/reset/normalize.css')}`,
-          `import ${JSON.stringify('@unocss/reset/sanitize/sanitize.css')}`,
-          `import ${JSON.stringify('@unocss/reset/sanitize/assets.css')}`,
-        // `import ${JSON.stringify('@unocss/reset/tailwind-compat.css')}`,
+        ...[
+          '@unocss/reset/normalize.css',
+          '@unocss/reset/sanitize/sanitize.css',
+          '@unocss/reset/sanitize/assets.css',
+          // '@unocss/reset/tailwind-compat.css',
+        ].map(m => `import '${m}'`),
       ],
       // inspector: true,
       // mode: 'global',
@@ -60,6 +63,7 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
         transformerVariantGroup(),
       ],
     }),
+    mdx(),
   ],
   output: 'server',
   adapter: netlify({
