@@ -35,6 +35,9 @@ importers:
       '@astrojs/vue':
         specifier: ^3.0.0
         version: 3.0.0(@babel/core@7.22.15)(astro@3.0.8)(vite@4.4.9)(vue@3.3.4)
+      '@iconify/json':
+        specifier: ^2.2.111
+        version: 2.2.111
       '@unocss/reset':
         specifier: ^0.55.7
         version: 0.55.7
@@ -1891,6 +1894,13 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
+
+  /@iconify/json@2.2.111:
+    resolution: {integrity: sha512-/LpDXn355r1TJIooRiRjoEHpfmvmDBfWQFtP04bo9xO05NOfQpZwadCfXZw4d3eIF0SfIlPiLMHt3UfKOCRIMw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.1
+    dev: false
 
   /@iconify/tools@3.0.5:
     resolution: {integrity: sha512-NYhdaOK/pPTInlNRQHP1iaOMQtu6XfIjhYh8KBUqAiKlmSWwjWYT4bm8RpNgtgEmYAYrm2PY28A2OGBP35pA1w==}

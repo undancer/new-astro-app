@@ -37,6 +37,7 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
           '@unocss/reset/normalize.css',
           '@unocss/reset/sanitize/sanitize.css',
           '@unocss/reset/sanitize/assets.css',
+          '@unocss/reset/eric-meyer.css',
           // '@unocss/reset/tailwind-compat.css',
         ].map(m => `import '${m}'`),
       ],
