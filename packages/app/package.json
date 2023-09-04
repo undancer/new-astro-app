@@ -18,9 +18,11 @@
     "astro": "^3.0.7",
     "daisyui": "^3.6.4",
     "pinia": "^2.1.6",
+    "sass": "^1.66.1",
     "unocss": "^0.55.6",
     "unocss-preset-daisy": "^6.0.0",
     "vue": "^3.3.4",
+    "vue-demi": "^0.14.6",
     "vue-i18n": "^9.2.2"
   }
 }

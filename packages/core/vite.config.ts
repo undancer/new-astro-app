@@ -7,9 +7,9 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  mode:'production',
+  mode: 'production',
   build: {
-    minify:true,
+    minify: true,
     target: 'es2015',
     lib: {
       // Could also be a dictionary or array of multiple entry points
