@@ -1,3 +1,5 @@
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import netlify from '@astrojs/netlify/functions'
 import vue3 from '@astrojs/vue'
 import { defineConfig } from 'astro/config'
@@ -13,6 +15,8 @@ import {
 import { presetDaisy } from 'unocss-preset-daisy'
 import UnoCSS from 'unocss/astro'
 import mdx from '@astrojs/mdx'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://astro.build/config
 export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
@@ -65,6 +69,13 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
     }),
     mdx(),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+      },
+    },
+  },
   output: 'server',
   adapter: netlify({
     dist: new URL('./dist/', import.meta.url),

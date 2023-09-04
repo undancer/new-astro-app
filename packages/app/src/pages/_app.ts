@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { App } from 'vue-demi'
 
 export default (app: App) => {
   // app.use(i18nPlugin);
